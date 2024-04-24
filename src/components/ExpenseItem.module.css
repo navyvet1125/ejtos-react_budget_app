@@ -1,0 +1,22 @@
+/* create css class for adding bootstrap 'okay' color to 'add' button.  Button should be darker when hovered or focused on. */
+.okay {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.okay:hover, .okay:active, .okay:focus {
+  color: #218838;
+  border-color: #1e7e34;
+}
+
+
+/* create similar classes for adding bootstrap 'danger' color to 'remove' button. */
+.danger {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.danger:hover, .danger:active, .danger:focus {
+  color: #c82333;
+  border-color: #bd2130;
+}
