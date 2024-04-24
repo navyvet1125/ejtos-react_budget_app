@@ -5,7 +5,7 @@ import { AppContext } from '../context/AppContext';
 import styles from './ExpenseItem.module.css';
 
 const ExpenseItem = (props) => {
-    const { dispatch } = useContext(AppContext);
+    const { dispatch, currency } = useContext(AppContext);
 
     const handleDeleteExpense = () => {
         dispatch({
@@ -42,9 +42,9 @@ const ExpenseItem = (props) => {
     return (
         <tr>
         <td>{props.name}</td>
-        <td>£{props.cost}</td>
-        <td><IoMdAddCircle className={styles.okay} size='1.5em' onClick={event=> increaseAllocation(props.name)} /></td>
-        <td><IoMdRemoveCircle className={styles.danger} size='1.5em' onClick={event=> decreaseAllocation(props.name)} /></td>
+        <td>{currency}{props.cost}</td>
+        <td><IoMdAddCircle className={styles.okay} size='2.5em' onClick={event=> increaseAllocation(props.name)} /></td>
+        <td><IoMdRemoveCircle className={styles.danger} size='2.5em' onClick={event=> decreaseAllocation(props.name)} /></td>
         <td><TiDelete className={styles.danger} size='1.5em' onClick={handleDeleteExpense}></TiDelete></td>
         </tr>
     );
